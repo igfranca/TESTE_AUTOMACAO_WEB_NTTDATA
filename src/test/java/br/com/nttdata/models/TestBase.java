@@ -1,4 +1,4 @@
-package br.com.nttdata.modelo;
+package br.com.nttdata.models;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
@@ -8,9 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+
+import static org.junit.Assert.*;
 
 public class TestBase {
 
@@ -54,7 +55,7 @@ public class TestBase {
     driver.findElement(By.xpath("/html/body/div[10]/div/div[2]/div[3]/div[2]/button")).click();
 
     //Pegar o valor do item na sacola
-    String valorDoItemNaSacola = driver.findElement(By.xpath("//*[@id='cart-item-164109']/div/div[1]/div/div[2]/div[1]/div")).getText();
+    String valorDoItemNaSacola = driver.findElement(By.xpath("//*[@id='resumeValues']/div[2]/div[2]/div[2]/div")).getText();
 
     //Imprimir na tela o valor do item na sacola
     System.out.println("Valor do item na sacola: " + valorDoItemNaSacola);
