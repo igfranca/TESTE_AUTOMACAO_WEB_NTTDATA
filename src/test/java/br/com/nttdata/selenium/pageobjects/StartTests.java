@@ -9,6 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
@@ -18,10 +19,12 @@ public class StartTests {
 
   @BeforeClass
   public static void setUpClass() {
-    WebDriverManager.chromedriver().setup();
-    driver = new ChromeDriver();
-    driver.manage().window().maximize();
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    WebDriverManager.chromedriver().setup(); //Instanciar o setup do Chrome Driver por bonigarcia
+    ChromeOptions options = new ChromeOptions(); //Instanciar o Chrome Options
+    options.addArguments("--force-device-scale-factor=0.9"); //Diminuir a escala dá página
+    driver = new ChromeDriver(options); //Instanciar Chrome Driver
+    driver.manage().window().maximize(); //Maximizar a tela
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); //Espera implícita 20 segundos
   }
 
   @Test
