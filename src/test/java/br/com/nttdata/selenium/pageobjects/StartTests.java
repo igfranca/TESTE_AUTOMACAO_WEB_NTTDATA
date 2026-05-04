@@ -16,8 +16,6 @@ public class StartTests {
 
   public static WebDriver driver;
 
-  boolean precoProdutoFlag;
-
   @BeforeClass
   public static void setUpClass() {
     WebDriverManager.chromedriver().setup();
@@ -27,7 +25,7 @@ public class StartTests {
   }
 
   @Test
-  public void CN1_BuscarEValidarOProduto() throws InterruptedException {
+  public void BuscarEValidarOProduto() throws InterruptedException {
     PageHome pageHome = new PageHome(driver);
     PageProduct pageProduct = new PageProduct(driver);
     PageBag pageBag = new PageBag(driver);
