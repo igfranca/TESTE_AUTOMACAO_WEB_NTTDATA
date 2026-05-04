@@ -1,8 +1,8 @@
-package br.com.nttdata.pageobjects;
+package br.com.nttdata.selenium.pageobjects;
 
-import br.com.nttdata.pageobjects.pages.PageBag;
-import br.com.nttdata.pageobjects.pages.PageHome;
-import br.com.nttdata.pageobjects.pages.PageProduct;
+import br.com.nttdata.selenium.pageobjects.pages.PageBag;
+import br.com.nttdata.selenium.pageobjects.pages.PageHome;
+import br.com.nttdata.selenium.pageobjects.pages.PageProduct;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -39,13 +39,15 @@ public class StartTests {
     String precoProduto = pageProduct.pegarValorDoProduto();
     pageProduct.adicionarProdutoEIrSacola();
 
-
-  //Buscar o preço do produto na página sacola
+    //Buscar o preço do produto na página sacola
     String precoSacola = pageBag.pegarValorDoProdutoNaSacola();
 
-    //Produto Visível na sacola
-//    boolean estaNoCarrinho = pageBag.verificaProdutoNaBag();
-//    assertTrue("O produto deve estar visível na bag", estaNoCarrinho);
+    System.out.println("Preço do produto na página do produto: " + precoProduto);
+    System.out.println("Preço do produto na página da sacola: " +  precoSacola);
+
+    if (precoProduto.equals(precoSacola)) {
+      System.out.println("Os valores estão corretos");
+    } else System.out.println("Os valores não estão corretos");
 
   }
 

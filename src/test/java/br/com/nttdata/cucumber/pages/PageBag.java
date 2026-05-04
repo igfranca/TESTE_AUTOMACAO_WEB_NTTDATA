@@ -1,13 +1,13 @@
-package br.com.nttdata.pageobjects.pages;
+package br.com.nttdata.cucumber.pages;
 
-import br.com.nttdata.pageobjects.features.FeatureBag;
+import br.com.nttdata.cucumber.attributes.AttributesBag;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class PageBag extends FeatureBag {
+public class PageBag extends AttributesBag {
 
   private WebDriver driver;
 

@@ -1,6 +1,6 @@
-package br.com.nttdata.pageobjects.pages;
+package br.com.nttdata.selenium.pageobjects.pages;
 
-import br.com.nttdata.pageobjects.features.FeatureHome;
+import br.com.nttdata.selenium.pageobjects.features.FeatureHome;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 

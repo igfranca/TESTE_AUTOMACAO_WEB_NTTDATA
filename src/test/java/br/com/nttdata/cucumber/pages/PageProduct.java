@@ -1,9 +1,9 @@
-package br.com.nttdata.pageobjects.pages;
+package br.com.nttdata.cucumber.pages;
 
-import br.com.nttdata.pageobjects.features.FeatureProduct;
+import br.com.nttdata.cucumber.attributes.AttributesProduct;
 import org.openqa.selenium.WebDriver;
 
-public class PageProduct extends FeatureProduct {
+public class PageProduct extends AttributesProduct {
 
   private WebDriver driver;
 
