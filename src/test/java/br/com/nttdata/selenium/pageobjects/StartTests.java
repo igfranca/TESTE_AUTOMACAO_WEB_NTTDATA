@@ -46,8 +46,8 @@ public class StartTests {
     System.out.println("Preço do produto na página da sacola: " +  precoSacola);
 
     if (precoProduto.equals(precoSacola)) {
-      System.out.println("Os valores estão corretos");
-    } else System.out.println("Os valores não estão corretos");
+      System.out.println("Os valores da página do produto e página da sacola estão corretos");
+    } else System.out.println("Os valores da página do produto e página da sacola não estão corretos");
 
   }
 
