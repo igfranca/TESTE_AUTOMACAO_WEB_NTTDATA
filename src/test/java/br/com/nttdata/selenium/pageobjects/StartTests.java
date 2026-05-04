@@ -16,6 +16,8 @@ public class StartTests {
 
   public static WebDriver driver;
 
+  boolean precoProdutoFlag;
+
   @BeforeClass
   public static void setUpClass() {
     WebDriverManager.chromedriver().setup();
